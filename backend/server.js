@@ -1,12 +1,12 @@
-const express = require('express')
+require('dotenv').config();
+const app = require('./app');
 
-const PORT = process.env.PORT || 4000
-const app = express()
+const PORT = process.env.PORT || 4000;
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello')
-})
+  res.status(200).send('Welcome to RIPS');
+});
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+  console.log(`Server running on port ${PORT}`);
+});
